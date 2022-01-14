@@ -1,3 +1,4 @@
+<?php include "inc_header.php"; ?>
 <?php
 
 if (isset($_GET['katakunci'])) {
@@ -6,10 +7,12 @@ if (isset($_GET['katakunci'])) {
    $katakunci = '';
 }
 
+$sql1 = "SELECT * FROM halaman ORDER BY id DESC";
+$query = mysqli_query($koneksi, $sql1);
+$no = 1;
 ?>
 
 
-<?php include "inc_header.php"; ?>
 <h1>Halaman Admin</h1>
 <p>
    <a href="halaman_input.php">
@@ -36,15 +39,17 @@ if (isset($_GET['katakunci'])) {
       </tr>
    </thead>
    <tbody>
-      <tr>
-         <td>1</td>
-         <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, ratione.</td>
-         <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</td>
-         <td>
-            <span class="badge bg-warning text-dark">Edit</span>
-            <span class="badge bg-danger">Delete</span>
-         </td>
-      </tr>
+      <?php while ($row = mysqli_fetch_assoc($query)) : ?>
+         <tr>
+            <td><?= $no++; ?></td>
+            <td><?= $row['judul']; ?></td>
+            <td><?= $row['kutipan']; ?></td>
+            <td>
+               <span class="badge bg-warning text-dark">Edit</span>
+               <span class="badge bg-danger">Delete</span>
+            </td>
+         </tr>
+      <?php endwhile; ?>
    </tbody>
 </table>
 <?php include "inc_footer.php"; ?>
