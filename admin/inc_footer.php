@@ -15,7 +15,24 @@
                }
             }
          },
-         height: 200
+         height: 200,
+
+         toolbar: [
+            ["style", ["bold", "italic", "underline", "clear"]],
+            ["fontname", ["fontname"]],
+            ["fontsize", ["fontsize"]],
+            ["color", ["color"]],
+            ["para", ["ul", "ol", "paragraph"]],
+            ["height", ["height"]],
+            ["insert", ["link", "picture", "imageList", "video", "hr"]],
+            ["help", ["help"]]
+         ],
+         dialogsInBody: true,
+         imageList: {
+            endpoint: "daftar_gambar.php",
+            fullUrlPrefix: "../gambar/",
+            thumbUrlPrefix: "../gambar/"
+         }
       });
 
       $.upload = function(file) {
@@ -43,8 +60,6 @@
 </div>
 
 
-<!-- bootstrap 5 -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 
 </html>

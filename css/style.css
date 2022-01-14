@@ -1,0 +1,17 @@
+.image-list-content .col-lg-3 {
+   width: 100%;
+}
+
+.image-list-content img {
+   float: left;
+   width: 20%;
+}
+
+.image-list-content p {
+   float: left;
+   padding-left: 20px;
+}
+
+.image-list-item {
+   padding: 10px 0 10px 0;
+}
