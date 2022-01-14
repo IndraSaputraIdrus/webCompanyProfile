@@ -56,7 +56,7 @@ if (isset($_POST['submit'])) {
 <?php endif; ?>
 
 <form action="" method="post">
-   <div class="mb-3 row">
+   <div class=" mb-3 row">
       <label for="judul" class="col-sm-2 col-form-label">Judul</label>
       <div class="col-sm-10">
          <input type="text" class="form-control" id="judul" name="judul" value="<?= $judul; ?>">
@@ -71,7 +71,7 @@ if (isset($_POST['submit'])) {
    <div class="mb-3 row">
       <label for="isi" class="col-sm-2 col-form-label">Isi</label>
       <div class="col-sm-10">
-         <textarea name="isi" id="isi" class="form-control" cols="30" rows="10"><?= $isi; ?></textarea>
+         <textarea name="isi" id="summernote" class="form-control" cols="30" rows="10"><?= $isi; ?></textarea>
       </div>
    </div>
 
